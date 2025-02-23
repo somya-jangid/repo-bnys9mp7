@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Configuration</h1>
+    </header>
+    <form class="config-form">
+        <div class="form-step">
+            <h2>Project Details</h2>
+            <label for="project-name">Project Name</label>
+            <input type="text" id="project-name" name="project-name">
+            <label for="description">Description</label>
+            <textarea id="description" name="description"></textarea>
+            <label for="repo-url">Repository URL</label>
+            <input type="url" id="repo-url" name="repo-url">
+        </div>
+        <div class="form-step">
+            <h2>Deployment Target</h2>
+            <label for="deployment-target">Select Target</label>
+            <select id="deployment-target" name="deployment-target">
+                <option value="aws">AWS</option>
+                <option value="azure">Azure</option>
+                <option value="google-cloud">Google Cloud</option>
+                <option value="heroku">Heroku</option>
+                <option value="netlify">Netlify</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div class="form-step">
+            <h2>Environment Variables</h2>
+            <div class="env-var">
+                <input type="text" placeholder="Key">
+                <input type="text" placeholder="Value">
+                <button type="button" class="add-var">+</button>
+            </div>
+        </div>
+        <div class="form-step">
+            <h2>Build Commands</h2>
+            <label for="pre-build">Pre-build Command</label>
+            <textarea id="pre-build" name="pre-build"></textarea>
+            <label for="build">Build Command</label>
+            <textarea id="build" name="build"></textarea>
+            <label for="post-build">Post-build Command</label>
+            <textarea id="post-build" name="post-build"></textarea>
+        </div>
+        <div class="form-step">
+            <h2>Output Directory</h2>
+            <label for="output-dir">Output Directory</label>
+            <input type="text" id="output-dir" name="output-dir">
+        </div>
+        <div class="form-navigation">
+            <button type="button" class="prev-step">Previous</button>
+            <button type="button" class="next-step">Next</button>
+            <button type="submit" class="generate-files">Generate Files</button>
+        </div>
+    </form>
+</body>
+</html>
